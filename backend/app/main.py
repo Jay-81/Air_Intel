@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.aqi import router as aqi_router
+from app.api.live import router as live_router
 
 app = FastAPI(
     title="AirIntel API",
@@ -17,7 +18,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Register Routes
 app.include_router(aqi_router)
+app.include_router(live_router)
 
 
 @app.get("/")
