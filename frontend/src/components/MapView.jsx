@@ -62,19 +62,47 @@ function MapView({ onLocationSelect }) {
             }}
           >
             <Tooltip>
-              <div>
-                <strong>{location.name}</strong>
-                <br />
-                AQI: {location.aqi}
-                <br />
-                Status: {location.status}
-                <br />
-                {location.cause}
+              <div className="map-tooltip">
+                <strong className="map-tooltip-name">{location.name}</strong>
+
+                <div className="map-tooltip-row">
+                  <span className="map-tooltip-label">AQI</span>
+                  <span
+                    className={`map-tooltip-aqi map-tooltip-aqi--${getMarkerColor(
+                      location.aqi
+                    )}`}
+                  >
+                    {location.aqi}
+                  </span>
+                </div>
+
+                <div className="map-tooltip-row">
+                  <span className="map-tooltip-label">Status</span>
+                  <span>{location.status}</span>
+                </div>
+
+                <div className="map-tooltip-cause">{location.cause}</div>
               </div>
             </Tooltip>
           </CircleMarker>
         ))}
       </MapContainer>
+
+      <div className="map-legend">
+        <span className="map-legend-title">AQI Scale</span>
+        <div className="map-legend-item">
+          <span className="map-legend-dot map-legend-dot--green"></span>
+          Good (0–50)
+        </div>
+        <div className="map-legend-item">
+          <span className="map-legend-dot map-legend-dot--orange"></span>
+          Moderate (51–100)
+        </div>
+        <div className="map-legend-item">
+          <span className="map-legend-dot map-legend-dot--red"></span>
+          Unhealthy (100+)
+        </div>
+      </div>
     </div>
   );
 }

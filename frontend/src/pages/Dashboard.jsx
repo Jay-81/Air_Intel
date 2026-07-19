@@ -9,7 +9,7 @@ function Dashboard() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   return (
-    <>
+    <div className="dashboard-page">
       <Navbar />
 
       <div className="dashboard">
@@ -21,7 +21,7 @@ function Dashboard() {
           <LocationDashboard location={selectedLocation} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
