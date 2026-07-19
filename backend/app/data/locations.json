@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Anna Nagar",
+    "coordinates": [13.0843, 80.2101],
+    "aqi": 182,
+    "status": "Unhealthy",
+    "pm25": 94,
+    "pm10": 126,
+    "humidity": 72,
+    "temperature": 34,
+    "cause": "Heavy Traffic",
+    "forecast": {
+      "morning": 174,
+      "afternoon": 182,
+      "evening": 192
+    }
+  },
+  {
+    "id": 2,
+    "name": "Guindy",
+    "coordinates": [13.0104, 80.2206],
+    "aqi": 98,
+    "status": "Moderate",
+    "pm25": 56,
+    "pm10": 82,
+    "humidity": 68,
+    "temperature": 33,
+    "cause": "Construction Activity",
+    "forecast": {
+      "morning": 92,
+      "afternoon": 98,
+      "evening": 104
+    }
+  },
+  {
+    "id": 3,
+    "name": "Tambaram",
+    "coordinates": [12.9249, 80.1000],
+    "aqi": 48,
+    "status": "Good",
+    "pm25": 21,
+    "pm10": 37,
+    "humidity": 75,
+    "temperature": 31,
+    "cause": "Low Pollution",
+    "forecast": {
+      "morning": 44,
+      "afternoon": 48,
+      "evening": 52
+    }
+  }
+]
