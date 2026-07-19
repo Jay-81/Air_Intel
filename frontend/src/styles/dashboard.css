@@ -1,13 +1,17 @@
 .dashboard{
+    display:grid;
+    grid-template-columns:65% 35%;
+    gap:24px;
+    padding:24px;
+    background:#0B1120;
+    min-height:calc(100vh - 90px);
+    box-sizing:border-box;
+}
 
-    height:calc(100vh - 72px);
+.map-section{
+    height:80vh;
+}
 
-    display:flex;
-
-    gap:22px;
-
-    padding:22px;
-
-    background:#020617;
-
+.side-panel{
+    height:80vh;
 }

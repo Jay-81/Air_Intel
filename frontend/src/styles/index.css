@@ -1,10 +1,10 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
 }
 
 html,
@@ -12,14 +12,18 @@ body,
 #root{
     width:100%;
     height:100%;
-    font-family:'Inter',sans-serif;
-    background:#020617;
-    overflow:hidden;
-    color:white;
+    background:#0B1120;
+    color:#F8FAFC;
 }
 
-button{
-    font-family:'Inter',sans-serif;
+body{
+    overflow:hidden;
+}
+
+button,
+input,
+textarea{
+    font-family:'Outfit',sans-serif;
 }
 
 a{
