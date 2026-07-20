@@ -1,5 +1,6 @@
 # Python
 venv/
+ml_env/
 ml/ml_env/
 __pycache__/
 *.pyc
