@@ -1,7 +1,9 @@
 # Python
 venv/
+ml/ml_env/
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
 .env
 
 # Node
