@@ -18,20 +18,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register Routes
 app.include_router(aqi_router)
 app.include_router(live_router)
 
 
 @app.get("/")
 def root():
-    return {
-        "message": "Welcome to AirIntel API"
-    }
+    return {"message": "Welcome to AirIntel API"}
 
 
 @app.get("/health")
 def health():
-    return {
-        "status": "healthy"
-    }
+    return {"status": "healthy"}
