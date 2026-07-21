@@ -43,24 +43,23 @@ def get_all_locations():
 # ==========================================================
 # Random Forest - Current AQI Prediction
 # ==========================================================
-def predict_current_aqi(components):
+def predict_current_aqi(features):
 
-    features = np.array([[
-        components["pm2_5"],
-        components["pm10"],
-        components["no"],
-        components["no2"],
-        components["no"] + components["no2"],   # Approximate NOx
-        components["nh3"],
-        components["co"],
-        components["so2"],
-        components["o3"],
-    ]])
+    model_input = pd.DataFrame([{
+        "PM2.5": features["PM2.5"],
+        "PM10": features["PM10"],
+        "NO": features["NO"],
+        "NO2": features["NO2"],
+        "NOx": features["NOx"],
+        "NH3": features["NH3"],
+        "CO": features["CO"],
+        "SO2": features["SO2"],
+        "O3": features["O3"],
+    }])
 
-    prediction = rf_model.predict(features)[0]
+    prediction = rf_model.predict(model_input)[0]
 
     return round(float(prediction), 2)
-
 # ==========================================================
 # Get Last 30 AQI Values
 # ==========================================================
@@ -86,16 +85,22 @@ def get_last_30_aqi(city):
 
 def predict_next_3_days(city):
 
+    # Get last 30 AQI values for the city
     last_30_aqi = get_last_30_aqi(city)
 
-    data = np.array(last_30_aqi).reshape(-1, 1)
+    # Convert to DataFrame (same format used during training)
+    data = pd.DataFrame(last_30_aqi, columns=["AQI"])
 
+    # Scale the data
     scaled = lstm_scaler.transform(data)
 
+    # Reshape for LSTM input
     X = scaled.reshape(1, 30, 1)
 
+    # Predict next 3 AQI values
     prediction = lstm_model.predict(X, verbose=0)
 
+    # Convert back to original AQI scale
     prediction = lstm_scaler.inverse_transform(
         prediction.reshape(-1, 1)
     ).flatten()
