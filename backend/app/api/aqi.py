@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from app.services.forecast import get_all_locations
-from app.models.schemas import Location
+from app.models.schemas import MapLocation
 
 router = APIRouter(
     prefix="/locations",
@@ -11,8 +11,7 @@ router = APIRouter(
 
 @router.get(
     "/",
-    response_model=list[Location]
+    response_model=list[MapLocation]
 )
 def get_locations():
-
     return get_all_locations()

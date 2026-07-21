@@ -3,6 +3,7 @@ from app.services.ml_services import (
     predict_current_aqi,
     predict_next_3_days,
 )
+from app.services.gemini import generate_health_analysis
 
 
 def get_live_aqi(city: str, lat: float, lon: float):
@@ -21,6 +22,10 @@ def get_live_aqi(city: str, lat: float, lon: float):
         LSTM
             ↓
         Forecast
+            ↓
+        Gemini AI
+            ↓
+        Health Analysis
     """
 
     # -----------------------------
@@ -57,6 +62,15 @@ def get_live_aqi(city: str, lat: float, lon: float):
     forecast = predict_next_3_days(city)
 
     # -----------------------------
+    # Gemini AI Analysis
+    # -----------------------------
+    analysis = generate_health_analysis(
+        city,
+        round(current_aqi, 2),
+        forecast,
+    )
+
+    # -----------------------------
     # Final Response
     # -----------------------------
     return {
@@ -64,12 +78,14 @@ def get_live_aqi(city: str, lat: float, lon: float):
 
         "coordinates": {
             "latitude": lat,
-            "longitude": lon
+            "longitude": lon,
         },
 
         "current_aqi": round(current_aqi, 2),
 
         "forecast": forecast,
 
-        "pollution_components": components
+        "analysis": analysis,
+
+        "pollution_components": components,
     }

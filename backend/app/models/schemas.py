@@ -20,3 +20,10 @@ class Location(BaseModel):
     temperature: int
     cause: str
     forecast: Forecast
+
+
+class MapLocation(BaseModel):
+    name: str
+    latitude: float
+    longitude: float
+    aqi: int

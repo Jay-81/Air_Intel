@@ -1,53 +1,28 @@
 [
-  {
-    "id": 1,
-    "name": "Anna Nagar",
-    "coordinates": [13.0843, 80.2101],
-    "aqi": 182,
-    "status": "Unhealthy",
-    "pm25": 94,
-    "pm10": 126,
-    "humidity": 72,
-    "temperature": 34,
-    "cause": "Heavy Traffic",
-    "forecast": {
-      "morning": 174,
-      "afternoon": 182,
-      "evening": 192
-    }
-  },
-  {
-    "id": 2,
-    "name": "Guindy",
-    "coordinates": [13.0104, 80.2206],
-    "aqi": 98,
-    "status": "Moderate",
-    "pm25": 56,
-    "pm10": 82,
-    "humidity": 68,
-    "temperature": 33,
-    "cause": "Construction Activity",
-    "forecast": {
-      "morning": 92,
-      "afternoon": 98,
-      "evening": 104
-    }
-  },
-  {
-    "id": 3,
-    "name": "Tambaram",
-    "coordinates": [12.9249, 80.1000],
-    "aqi": 48,
-    "status": "Good",
-    "pm25": 21,
-    "pm10": 37,
-    "humidity": 75,
-    "temperature": 31,
-    "cause": "Low Pollution",
-    "forecast": {
-      "morning": 44,
-      "afternoon": 48,
-      "evening": 52
-    }
-  }
+  { "name": "Ahmedabad", "latitude": 23.0225, "longitude": 72.5714, "aqi": 145 },
+  { "name": "Aizawl", "latitude": 23.7271, "longitude": 92.7176, "aqi": 38 },
+  { "name": "Amaravati", "latitude": 16.5417, "longitude": 80.5150, "aqi": 72 },
+  { "name": "Amritsar", "latitude": 31.6340, "longitude": 74.8723, "aqi": 168 },
+  { "name": "Bengaluru", "latitude": 12.9716, "longitude": 77.5946, "aqi": 65 },
+  { "name": "Bhopal", "latitude": 23.2599, "longitude": 77.4126, "aqi": 98 },
+  { "name": "Brajrajnagar", "latitude": 21.8167, "longitude": 83.9167, "aqi": 185 },
+  { "name": "Chandigarh", "latitude": 30.7333, "longitude": 76.7794, "aqi": 82 },
+  { "name": "Chennai", "latitude": 13.0827, "longitude": 80.2707, "aqi": 56 },
+  { "name": "Coimbatore", "latitude": 11.0168, "longitude": 76.9558, "aqi": 44 },
+  { "name": "Delhi", "latitude": 28.6139, "longitude": 77.2090, "aqi": 245 },
+  { "name": "Ernakulam", "latitude": 9.9816, "longitude": 76.2999, "aqi": 41 },
+  { "name": "Gurugram", "latitude": 28.4595, "longitude": 77.0266, "aqi": 221 },
+  { "name": "Guwahati", "latitude": 26.1445, "longitude": 91.7362, "aqi": 88 },
+  { "name": "Hyderabad", "latitude": 17.3850, "longitude": 78.4867, "aqi": 109 },
+  { "name": "Jaipur", "latitude": 26.9124, "longitude": 75.7873, "aqi": 133 },
+  { "name": "Jorapokhar", "latitude": 23.7167, "longitude": 86.4167, "aqi": 198 },
+  { "name": "Kochi", "latitude": 9.9312, "longitude": 76.2673, "aqi": 48 },
+  { "name": "Kolkata", "latitude": 22.5726, "longitude": 88.3639, "aqi": 174 },
+  { "name": "Lucknow", "latitude": 26.8467, "longitude": 80.9462, "aqi": 159 },
+  { "name": "Mumbai", "latitude": 19.0760, "longitude": 72.8777, "aqi": 77 },
+  { "name": "Patna", "latitude": 25.5941, "longitude": 85.1376, "aqi": 192 },
+  { "name": "Shillong", "latitude": 25.5788, "longitude": 91.8933, "aqi": 36 },
+  { "name": "Talcher", "latitude": 20.9500, "longitude": 85.2167, "aqi": 213 },
+  { "name": "Thiruvananthapuram", "latitude": 8.5241, "longitude": 76.9366, "aqi": 42 },
+  { "name": "Visakhapatnam", "latitude": 17.6868, "longitude": 83.2185, "aqi": 91 }
 ]
