@@ -9,7 +9,7 @@ import time
 # ==========================================================
 # Base Paths
 # ==========================================================
-BASE_DIR = Path(__file__).resolve().parents[3]
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 MODEL_DIR = BASE_DIR / "ml" / "models"
 DATASET_PATH = BASE_DIR / "ml" / "dataset" / "cleaned_city_day.csv"
